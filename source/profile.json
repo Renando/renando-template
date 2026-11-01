@@ -1,0 +1,60 @@
+{
+  "name": "Renando",
+  "wordmark": "RENANDO",
+  "roleLines": ["EDITOR &", "VFX ARTIST"],
+  "topline": ["EDITOR / VFX ARTIST", "VISUAL STORYTELLER"],
+  "tagline": "Merangkai cerita. Menciptakan realita.",
+  "intro": "Saya mengubah ide menjadi visual yang terasa, dari frame pertama hingga terakhir.",
+  "manifesto": ["Every frame.", "A different feeling."],
+  "location": "INDRAMAYU, INDONESIA",
+  "portrait": "./Asset/img/renando-portrait.png",
+  "cv": "./Asset/cv/Renando_Editor_VFX.pdf.pdf",
+  "stats": [
+    { "value": "3", "label": ["TAHUN DI INDUSTRI", "KREATIF"] },
+    { "value": "18", "label": ["PROYEK FILM", "DAN CERITA"] },
+    { "value": "10", "label": ["AWARDS WON"], "linksTo": "#awards" }
+  ],
+  "contact": {
+    "email": "hello.renando@gmail.com",
+    "instagram": { "handle": "@renart.visual", "url": "https://www.instagram.com/renart.visual/" },
+    "youtube": "https://www.youtube.com/@DuingZStudio",
+    "whatsapp": "6287786923444",
+    "phoneDisplay": "+62 877-8692-3444"
+  },
+  "about": "Saya Renando, visual artist dari Indramayu. Saya bekerja di antara film, VFX, CGI, dan post-production, menggabungkan sisi kreatif dan teknis untuk membangun cerita yang punya rasa.",
+  "education": [
+    { "title": "SMKN 1 Indramayu", "meta": "Animasi", "text": "Animation, visual effects, CGI & digital media." },
+    { "title": "Dalang Digital Studio", "meta": "2023", "text": "6-month VFX & post-production internship." },
+    { "title": "Courses & Workshops", "text": "Videolabs · RifqiArt · Mindplace" }
+  ],
+  "skills": ["VFX & CGI", "Compositing", "3D Environment", "Video Editing", "Color Grading", "Storytelling", "Photography", "Web Development"],
+  "software": [["pr", "Premiere Pro"], ["ae", "After Effects"], ["bl", "Blender"], ["ps", "Photoshop"], ["lr", "Lightroom"], ["cc", "CapCut"]],
+  "experiences": [
+    { "date": "2026 · SEKARANG", "title": "Freelance Creative", "place": "Film & branded content", "text": "Mengembangkan konsep dan naskah film pendek, serta memproduksi konten sinematik untuk brand café, fashion, dan hijab. Dari storytelling sampai penyelesaian visual." },
+    { "date": "2023 – 2025", "title": "VFX Artist", "place": "Film & commercial production", "text": "Compositing, CGI, matchmove, rotoscoping, dan breakdown editing. Terlibat dalam supervisi pengambilan gambar untuk kebutuhan post-production." },
+    { "date": "2023 · 6 BULAN", "title": "VFX Internship", "place": "Dalang Digital Studio", "text": "Terlibat dalam produksi film dan iklan, mempelajari pipeline studio, serta berkolaborasi dalam workflow visual effects dan animasi." },
+    { "date": "2022 – 2023", "title": "Freelance Editor", "place": "Video, photography & film", "text": "Menyunting video review hotel untuk YouTube, memotret pernikahan, dan berkolaborasi dalam film pendek sebagai editor dan aktor." },
+    { "date": "2018 · SEKARANG", "title": "Content Creator", "place": "DuingZ Studio", "text": "Membuat konten gaming, coding, film pendek, dan eksperimen VFX. Tempat saya mencoba ide dan terus mengembangkan cara bercerita." }
+  ],
+  "awards": [
+    { "year": "2025", "title": "1st Place", "event": "Indramayu Film Festival" },
+    { "year": "2024", "title": "Best Competency Exam", "event": "Animation Program" },
+    { "year": "2023", "title": "Best Short Film", "event": "Golkar Party" },
+    { "year": "2022", "title": "1st Place, Short Film", "event": "Hero Theme" },
+    { "year": "2021", "title": "1st Place, Short Film", "event": "Hero Theme" },
+    { "year": "2020", "title": "Best Creative Video", "event": "Creative Video Competition" }
+  ],
+  "certificates": [
+    { "title": "Juara 1 Movie Event", "year": "2025", "image": "./Asset/img/SERTIFIKAT/shortmovie.jpeg" },
+    { "title": "Lulusan Terbaik 2", "year": "2024", "image": "./Asset/img/SERTIFIKAT/juara2.jpg" },
+    { "title": "Dalang Digital Studio", "year": "2023", "image": "./Asset/img/SERTIFIKAT/dalang.jpg" },
+    { "title": "Videolabs E-Course", "year": "2024", "image": "./Asset/img/SERTIFIKAT/videolabs.jpg" }
+  ],
+  "process": [
+    ["01", "THE IDEA", "Mendengar cerita Anda. Menentukan pesan, arah visual, dan rasa yang ingin dibawa."],
+    ["02", "THE PLAN", "Mengembangkan konsep, referensi, dan alur kerja yang sesuai dengan kebutuhan produksi."],
+    ["03", "THE CRAFT", "Editing, compositing, dan visual effects. Membentuk setiap detail menjadi satu cerita."],
+    ["04", "THE POLISH", "Menyatukan warna, ritme, dan suara. Memastikan setiap frame bekerja sebagaimana mestinya."],
+    ["05", "THE FINAL FRAME", "Review bersama, sentuhan terakhir, lalu hasil yang siap menemui penontonnya."]
+  ]
+}

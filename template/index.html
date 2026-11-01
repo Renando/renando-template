@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get this template | RENANDO</title>
+<style>
+:root{--bg:#090909;--ink:#f2efeb;--muted:#a09c9a;--red:#e32b3c;--line:#292323}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+main{max-width:980px;margin:auto;padding:48px 20px 80px}
+h1{font:400 clamp(44px,9vw,96px)/1 Impact,'Anton',sans-serif;margin:0 0 12px}h1 span{color:var(--red)}
+p{color:var(--muted);max-width:60ch}.row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+button,a.btn{min-height:44px;padding:0 22px;border:1px solid var(--red);background:var(--red);color:#fff;font:600 14px system-ui;cursor:pointer;display:inline-flex;align-items:center;text-decoration:none}
+a.btn.alt{background:none;color:var(--ink)}button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.shots{display:grid;grid-template-columns:2fr 1fr;gap:16px;align-items:start;margin:32px 0}.shots img{width:100%;border:1px solid var(--line)}
+ol{padding-left:20px;color:var(--muted)}li{margin:8px 0}li b{color:var(--ink)}
+textarea{width:100%;height:240px;background:#101010;color:var(--muted);border:1px solid var(--line);padding:14px;font:12px/1.5 ui-monospace,monospace}
+@media(max-width:600px){.shots{grid-template-columns:1fr}}
+</style></head><body><main>
+<h1>GET THIS<br>TEMPLATE<span>.</span></h1>
+<p>Copy the prompt, paste it into any AI coding agent, and it rebuilds this exact portfolio from the registered source. Then add your photo and instructions.</p>
+<div class="row"><button id="copy">Copy prompt</button><a class="btn alt" href="../source/">Browse source</a><a class="btn alt" href="prompt.md" download>prompt.md</a></div>
+<p id="status" role="status"></p>
+<div class="shots"><img src="desktop-preview.jpg" alt="Desktop preview" loading="lazy"><img src="mobile-preview.jpg" alt="Mobile preview" loading="lazy"></div>
+<h2>How to use</h2>
+<ol>
+<li><b>Copy prompt</b> and paste it into Codex, Claude Code, Cursor, or similar.</li>
+<li>Under the prompt, write what you want: <i>"My name is …, here is my photo, my projects are …, accent colour blue."</i></li>
+<li>The agent fetches the exact source, builds it, swaps your content, and checks it in the browser.</li>
+<li>Host the <code>index.html</code> and <code>Asset/</code> folder anywhere static.</li>
+</ol>
+<textarea id="prompt" readonly aria-label="Prompt"># Rebuild this site from its exact source: RENANDO — Cinematic Editor &amp; VFX Portfolio
+
+You are working in an empty (or existing) project folder. Rebuild the portfolio below **from its exact registered source**. Do not recreate it from a screenshot, description, or the notes in this prompt. The notes only tell you what you are looking at and how to customise it.
+
+## 1. Exact source (fetch first)
+
+Base URL: `https://renando.github.io/renando-template`
+
+Required files — fetch every one, write it to the path shown, and verify its SHA-256 matches before editing anything:
+
+- `package.json` — https://renando.github.io/renando-template/source/package.json · SHA-256 `aadf6ebbbc96f364553c8ec671b6bcd9b79a3d7f199a99e128fb616005bf6303`
+- `index.html` — https://renando.github.io/renando-template/source/index.html · SHA-256 `d2e5a55f578b229058747b6b11b3589199276cb69076543631a3865a3f5c0e77`
+- `scripts/build.mjs` — https://renando.github.io/renando-template/source/scripts/build.mjs · SHA-256 `677c06ed905e8dae866a196a757600116cd4a7ef3b59d196e85f4ca90f3c7f10`
+- `src/app.jsx` — https://renando.github.io/renando-template/source/src/app.jsx · SHA-256 `b926c11b332733674672d71beb1fd946e701cb3b20d3314077ce9de36b75fec7`
+- `src/styles.css` — https://renando.github.io/renando-template/source/src/styles.css · SHA-256 `14a619ea8ccfb731c242e0d4a0e7874edd4471d0c1a74321abb195282ba8c79c`
+- `src/data/projects.json` — https://renando.github.io/renando-template/source/src/data/projects.json · SHA-256 `663cabf234e42e1bd502fd7c0e7c61f5c3fa2cc4fc3f6f2e9c2a70941a58be86`
+- `src/data/brands.json` — https://renando.github.io/renando-template/source/src/data/brands.json · SHA-256 `704cf066afa45297f54915d3dc1a5bab2d6c676f15b2f35d3ed626a67312d6b4`
+- `profile.json` — https://renando.github.io/renando-template/source/profile.json · SHA-256 `7041d43b1003cd3c1c6fb5626bf1c893167722205ac064bd350110dc6e99bb51`
+
+Rules:
+- Fetch and read the complete source before writing code. If any file cannot be fetched or its hash differs, **stop and report that**. Never substitute a recreation.
+- Keep the structure, styles, motion values, interactions, responsive rules and asset paths exactly as the source has them. Only the customisation step (section 8) may change content.
+- Do not add libraries, a router, a CSS framework or a state manager. Do not "improve" the design.
+
+## 2. What it is
+
+A one-page, dark, red-accent film portfolio for an editor / VFX artist. Black ground (`#090909`), warm-white type (`#f2efeb`), crimson accent (`#e32b3c`), film grain overlay, thin section rules. React 19 + Framer Motion 12 + lucide-react, bundled by esbuild into `Asset/dist/app.js` and `Asset/dist/app.css`; the page itself is a plain static `index.html` with `&lt;div id="root">`.
+
+```
+npm install
+npm run build     # node scripts/build.mjs  → Asset/dist/app.js
+npm start         # node live_preview.js (optional)
+```
+
+`package.json` dependencies: `framer-motion ^12.23.0`, `react ^19.2.0`, `react-dom ^19.2.0`, `lucide-react ^0.468.0`; devDependency `esbuild ^0.25.0`.
+
+Fonts (Google Fonts link in `index.html`): **Anton** (display), **Manrope** 400–800 (body), **Caveat** 400/500 (handwriting accent).
+
+## 3. Design tokens (from `src/styles.css`, do not change)
+
+```css
+:root{--bg:#090909;--panel:#101010;--ink:#f2efeb;--muted:#a09c9a;--red:#e32b3c;--red-dark:#a6081c;--line:#292323;
+--body:'Manrope',sans-serif;--display:'Anton',Impact,sans-serif;--gutter:clamp(20px,3.8vw,68px)}
+```
+Hero lettering colour `#bd0c22`. Sections: `.section-wrap` max-width 1800px, padding `58px var(--gutter)`, 1px `--line` bottom rule. Minimum touch target 44px.
+
+## 4. Page structure (order is fixed)
+
+Sticky 66px header (wordmark, desktop nav, Motion on/off toggle, "Let's talk", mobile menu) → `main`:
+1. **Hero** — giant `PORTFOLIO` lettering in red behind a centred cut-out portrait; intro left (handwriting "Hello, I'm", name, role, tagline, magnetic CTA, location); right column (manifesto + stats 3+, 18+, 10+ awards, CV download); bottom row (play showreel, scroll hint, edition).
+2. **Selected work** (`#portfolio`) — 3 featured projects by default; "SEMUA KARYA" reveals the full archive with category filters (`Semua, VFX, Film, 3D, Commercial, Photography, Visual, Manipulation, Websites`), search, "load 9 more", animated filter underline (`layoutId`), project dialog (video embed / still / 3D render stages with Layout-Solid-Material-Lighting-Final switch). Then the brand-logo strip (auto-scrolling rail, pause, prev/next, "see all" grid).
+3. **Recognition &amp; Awards** (`#awards`) — laurel-framed `10+`, year-aligned list of 6 entries, certificate proof button; mobile shows 3 and expands to 6.
+4. **Breakdown** — before/after range-slider comparison of a 3D scene; slider auto-drifts with scroll until the user drags.
+5. **About** (`#about`) — lead statement, education &amp; skills panel, process timeline (5 steps, scroll-linked line), quote panel.
+6. **Journey** (`#experience`) — accordion of experiences, milestones list opening certificates.
+7. **Contact** (`#contact`) — CTA, contact links, reel card, project-brief form that opens a WhatsApp draft (never auto-sends).
+Footer with wordmark, copyright, social icons.
+
+## 5. Motion spec (Framer Motion, keep these numbers)
+
+- Global easing `EASE = [0.22, 1, 0.36, 1]`. `MotionContext` boolean gates all non-essential motion; header "Motion" toggle persists to `localStorage` key `renando-motion`; `prefers-reduced-motion` forces it off. `&lt;html data-motion="on|off">`.
+- `Reveal`: `initial {opacity:0, y:32}` → `whileInView {opacity:1, y:0}`, viewport `{once:false, amount:0.12}`, duration 0.75s, optional delay.
+- Reading-progress bar: `useScroll` → `useSpring {stiffness:100, damping:28, restDelta:0.001}`, 2px red, fixed top.
+- Hero: scroll target offset `['start start','end start']`; title `y 0→180`; portrait `y 0→85`, `scale 1→1.08`; intro copy `y 0→-55`. Entrance: title clip-path `inset(0 0 100% 0)`→`inset(0 0 0% 0)` 1.4s; portrait fade 1.2s delay 0.2; intro slide `x -35→0` 0.9s delay 0.35; side column `x 30→0` 1s delay 0.55.
+- Magnetic links: `useSpring {stiffness:220, damping:20}`, pull `0.12` (x) and `0.2` (y) of pointer offset, mouse only.
+- Project cards: fade-up `y 32→0` 0.6s, stagger `(index%3)*0.06`, image parallax `y -12→12` over the card's crossing, grid `layout` + `AnimatePresence mode="popLayout"`.
+- Brand rail: `useAnimationFrame`, `scrollLeft += min(delta,40) * 0.038`, seamless loop over two duplicated sets, pauses on hover/focus/in-viewport-false/user pause.
+- Dialog: backdrop fade, panel `y 45→0, scale 0.97→1` 0.35s, focus trap, `Escape` closes, body scroll locked, focus restored.
+- Breakdown: slider value `90 - progress*80` while untouched; title `x 30→-30`.
+- No fake loader. No scroll hijacking: native scrolling stays under the user's control.
+
+## 6. Responsive rules (from the source CSS)
+
+Breakpoints: `max-width` 1100, 800, 600, 370 and `min-width` 1600; plus `(hover:none)`. Hero height `clamp(720px, 100svh - 66px, 990px)`; at ≤600px the portrait sits centred with copy below, project grid becomes 2 columns (`gap 19px 12px`), category filters scroll horizontally, experience details collapse. No horizontal page overflow from 320px up. Safe-area insets respected.
+
+## 7. Assets
+
+Download the whole asset tree from `https://renando.github.io/renando-template/Asset/` (same relative paths) into `./Asset/`; if a file 404s, report it and use the labelled placeholder rather than inventing an image. Local (served from `./Asset/…`, copy as-is): `img/renando-portrait.png` (1024×1536 transparent cut-out), `img/favicon.svg`, `img/SERTIFIKAT/*`, `svg/*` (software icons `pr ae bl ps lr cc`), `svg/brand/*` (18 logos listed in `src/data/brands.json`), `cv/*.pdf`. Archive data: `src/data/projects.json` (116 entries: `type youtube|drive|render|image|website`, `title`, `description`, `media`, `role`, `year`, `category`, `image`, optional `renders[]`). Remote media (YouTube, Google Drive, Cloudinary) stays remote; embed failures show a retry and an "open original" link.
+
+A failed asset must be visible: images fall back to a labelled placeholder, video dialogs show a message after 14s.
+
+## 8. Customisation (the only step that may change content)
+
+After the exact rebuild builds and renders, apply the user's request that follows this prompt. Default mapping:
+
+- `profile.json` fields → the arrays and strings in `src/app.jsx` (`experiences`, `awards`, `certificates`, `processSteps`, hero copy, contact links, about text, skills). Replace them one-to-one; never change layout, class names, or motion values.
+- **Photo:** if the user supplies a photo or character sheet, generate/prepare a transparent-background cut-out portrait at 1024×1536 (studio light, red rim light, keep the person's face and identity unchanged) and save it to `Asset/img/&lt;name>-portrait.png`; update `portrait` and the `&lt;link rel="preload">` in `index.html`. Clothes and pose may change if the user says so.
+- **Projects:** replace `src/data/projects.json` entries with the user's, same schema. Featured three = entries matched in `featured` at the top of `app.jsx`.
+- **Brand colour:** if the user wants another accent, change only `--red`, `--red-dark` and the hero lettering colour.
+- Never invent metrics, awards, clients, endorsements or reviews. Leave a field out rather than make it up. Ask the user for anything missing.
+
+## 9. Verify before saying done
+
+1. `npm run build` succeeds with no errors.
+2. Open the page at 1440, 768 and 390 wide: no horizontal overflow, hero portrait visible, header usable.
+3. Scroll the whole page: reveals fire, progress bar moves, hero parallax moves; toggle Motion off and confirm everything is static but complete.
+4. Open one video project, one still, and the 3D breakdown dialog; `Escape` closes; focus returns.
+5. Filter, search and "load more" in the archive; awards expand to 6 on mobile.
+6. Report what you changed under section 8 and anything you could not verify.
+</textarea>
+</main><script>
+const t=document.getElementById('prompt'),s=document.getElementById('status');
+document.getElementById('copy').onclick=async()=>{try{await navigator.clipboard.writeText(t.value);s.textContent='Prompt copied.'}catch{t.select();s.textContent='Select all and copy manually.'}};
+</script></body></html>
