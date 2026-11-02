@@ -27,7 +27,7 @@ After your site is built, the agent plays an animation **once**: dozens of named
 
 ## Credits
 
-The animation uses [Swarm Rebuild](https://github.com/DhvanilPatel/swarm-cursors) by DhvanilPatel, inspired by [Swarm](https://joelcalifa.com) by Joel Califa.
+The animation uses Swarm Rebuild by DhvanilPatel, inspired by Swarm by Joel Califa.
 
 ## License
 
