@@ -113,7 +113,7 @@ import './styles.css';
 const MotionContext = createContext(true);
 const EASE = [0.22, 1, 0.36, 1];
 const categories = ['Semua', 'VFX', 'Film', '3D', 'Commercial', 'Photography', 'Visual', 'Manipulation', 'Websites'];
-const featured = ['Lv5rUKFkJbQ', '4iOvfP2j-qo', 'CYBERPUNK ENVIRONMENT'].map(key => archive.find(p => p.media === key || p.title === key)).filter(Boolean);
+const featured = ['wgGEoeSLR3g', '4iOvfP2j-qo', 'CYBERPUNK ENVIRONMENT'].map(key => archive.find(p => p.media === key || p.title === key)).filter(Boolean);
 const experiences = [
   { date: '2026 · SEKARANG', title: 'Freelance Creative', place: 'Film & branded content', text: 'Mengembangkan konsep dan naskah film pendek, serta memproduksi konten sinematik untuk brand café, fashion, dan hijab. Dari storytelling sampai penyelesaian visual.' },
   { date: '2023 – 2025', title: 'VFX Artist', place: 'Film & commercial production', text: 'Compositing, CGI, matchmove, rotoscoping, dan breakdown editing. Terlibat dalam supervisi pengambilan gambar untuk kebutuhan post-production.' },
@@ -209,7 +209,7 @@ function Hero({ onProject }) {
     </motion.div>
     <motion.div className="hero-side" initial={enabled ? { opacity: 0, x: 30 } : false} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.55, ease: EASE }}>
       <div className="hero-manifesto"><span className="crosshair" aria-hidden="true">✳</span><p>Every frame.<br />A different feeling.</p></div>
-      <div className="hero-stats"><div><span className="display">3<span>+</span></span><p>TAHUN DI INDUSTRI<br/>KREATIF</p></div><div><span className="display">18<span>+</span></span><p>PROYEK FILM<br/>DAN CERITA</p></div><div className="hero-award-stat"><span className="display">10<span>+</span></span><a href="#awards" aria-label="Lihat penghargaan Renando">AWARDS WON<ArrowUpRight size={12}/></a></div><a href="./Asset/cv/Renando_Editor_VFX.pdf.pdf" download><Download size={16}/><span>DOWNLOAD CV</span></a></div>
+      <div className="hero-stats"><div><span className="display">3<span>+</span></span><p>TAHUN DI INDUSTRI<br/>KREATIF</p></div><div><span className="display">20<span>+</span></span><p>PROYEK FILM<br/>DAN CERITA</p></div><div className="hero-award-stat"><span className="display">10<span>+</span></span><a href="#awards" aria-label="Lihat penghargaan Renando">AWARDS WON<ArrowUpRight size={12}/></a></div><a href="./Asset/cv/Renando_Editor_VFX.pdf.pdf" download><Download size={16}/><span>DOWNLOAD CV</span></a></div>
     </motion.div>
     <div className="hero-bottom"><button className="reel-button" onClick={() => onProject(featured[0])}><span className="play-circle"><Play size={12} fill="currentColor" /></span>PLAY SHOWREEL<span className="muted">VFX / CGI</span></button><span className="hero-scroll">SCROLL TO DISCOVER <ArrowDown size={13}/></span><span className="edition">SELECTED WORK / 2022–2026</span></div>
   </section>;
@@ -357,7 +357,7 @@ function Contact({ onProject }) {
   };
   return <section id="contact" className="contact section-wrap">
     <div className="contact-grid"><Reveal className="contact-intro"><span className="eyebrow">04 / YOUR NEXT STORY</span><h2 className="display">LET’S WORK<br/>TOGETHER<span className="accent">.</span></h2><p>Punya cerita yang ingin diwujudkan?<br/>Mari buat sesuatu yang layak ditonton.</p><Magnetic href="https://wa.me/6287786923444" target="_blank" rel="noopener noreferrer" className="contact-cta"><span className="round-arrow"><ArrowUpRight size={21}/></span>MULAI PERCAKAPAN</Magnetic></Reveal>
-    <Reveal className="contact-links" delay={0.1}><a href="mailto:hello.renando@gmail.com"><Mail/><span><small>EMAIL</small>hello.renando@gmail.com</span><ArrowUpRight size={16}/></a><a href="https://www.instagram.com/renart.visual/" target="_blank" rel="noopener noreferrer"><Instagram/><span><small>INSTAGRAM</small>@renart.visual</span><ArrowUpRight size={16}/></a><a href="tel:+6287786923444"><Phone/><span><small>PHONE / WHATSAPP</small>+62 877-8692-3444</span><ArrowUpRight size={16}/></a><div><MapPin/><span><small>BASED IN</small>Indramayu, Indonesia</span></div></Reveal>
+    <Reveal className="contact-links" delay={0.1}><a href="mailto:hello.renando@gmail.com"><Mail/><span><small>EMAIL</small>hello.renando@gmail.com</span><ArrowUpRight size={16}/></a><a href="https://www.instagram.com/dododididaw/" target="_blank" rel="noopener noreferrer"><Instagram/><span><small>INSTAGRAM</small>@dododididaw</span><ArrowUpRight size={16}/></a><a href="tel:+6287786923444"><Phone/><span><small>PHONE / WHATSAPP</small>+62 877-8692-3444</span><ArrowUpRight size={16}/></a><div><MapPin/><span><small>BASED IN</small>Indramayu, Indonesia</span></div></Reveal>
     <Reveal className="contact-reel" delay={0.2}><button onClick={() => onProject(featured[0])} aria-label="Putar VFX showreel Renando"><div className="reel-screen"><span className="reel-screen-top">RENANDO®<span>VFX / SHOWREEL</span></span><MediaImage src={featured[0]?.image} alt="VFX showreel Renando"/><span className="reel-screen-title display">MAKE IT<br/><span>FEEL REAL.</span></span><span className="play-circle"><Play size={18} fill="currentColor"/></span></div><span className="reel-caption">PRESS PLAY. ENTER MY WORLD.</span></button></Reveal></div>
     <Reveal><details className="project-brief"><summary>Ceritakan proyek Anda <Plus size={19}/></summary><form onSubmit={send}><label>Nama Anda<input name="name" required placeholder="Nama atau brand" autoComplete="name" maxLength="100"/></label><label>Jenis proyek<select name="type"><option>Film & Video Editing</option><option>VFX & CGI</option><option>3D & Compositing</option><option>Commercial Content</option><option>Photography</option><option>Website</option><option>Kolaborasi lainnya</option></select></label><label className="brief-message">Tentang proyek<textarea name="message" required rows="3" placeholder="Ceritakan ide, kebutuhan, dan perkiraan waktunya…" maxLength="3000"/></label><button className="solid-button" type="submit">Lanjut ke WhatsApp <ArrowUpRight size={18}/></button><p className="form-note" role="status">{sent ? 'Draft pesan siap di WhatsApp. Tekan Kirim di sana untuk memulai percakapan.' : 'Brief akan dibuka sebagai draft pesan di WhatsApp.'}</p></form></details></Reveal>
   </section>;
@@ -444,7 +444,7 @@ function App() {
         <span>© {new Date().getFullYear()} RENANDO. EVERY FRAME HAS A PURPOSE.</span>
         <div>
           <a href="https://www.youtube.com/@DuingZStudio" target="_blank" rel="noopener noreferrer" aria-label="YouTube DuingZ Studio"><Youtube size={17}/></a>
-          <a href="https://www.instagram.com/renart.visual/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Renart Visual"><Instagram size={17}/></a>
+          <a href="https://www.instagram.com/dododididaw/" target="_blank" rel="noopener noreferrer" aria-label="Instagram dododididaw"><Instagram size={17}/></a>
           <a href="#home" aria-label="Kembali ke atas"><ArrowUpRight size={18}/></a>
         </div>
       </footer>
@@ -600,12 +600,12 @@ Rules for assets:
   "cv": "./Asset/cv/Renando_Editor_VFX.pdf.pdf",
   "stats": [
     { "value": "3", "label": ["TAHUN DI INDUSTRI", "KREATIF"] },
-    { "value": "18", "label": ["PROYEK FILM", "DAN CERITA"] },
+    { "value": "20", "label": ["PROYEK FILM", "DAN CERITA"] },
     { "value": "10", "label": ["AWARDS WON"], "linksTo": "#awards" }
   ],
   "contact": {
     "email": "hello.renando@gmail.com",
-    "instagram": { "handle": "@renart.visual", "url": "https://www.instagram.com/renart.visual/" },
+    "instagram": { "handle": "@dododididaw", "url": "https://www.instagram.com/dododididaw/" },
     "youtube": "https://www.youtube.com/@DuingZStudio",
     "whatsapp": "6287786923444",
     "phoneDisplay": "+62 877-8692-3444"
