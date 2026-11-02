@@ -1,9 +1,14 @@
 Renando Cinematic Portfolio, free edition
 
-You may use and modify the code (src/, source/, scripts/) for your own portfolio, personal or commercial.
+You may use and modify the code in prompt.md for your own portfolio, personal or commercial.
 You may not resell or redistribute it as a template, theme, prompt pack or course material.
 
-Not licensed for reuse: Asset/img (portrait, certificates), Asset/svg/brand and Asset/cv, project media and
-all personal data in profile.json and src/data. Replace them with your own.
+Not licensed for reuse: the photos, certificates, brand logos, CV, project media and all personal
+data in the example. Replace them with your own.
+
+Third party: the "built by a swarm of agents" animation uses Swarm Rebuild by DhvanilPatel
+(https://github.com/DhvanilPatel/swarm-cursors), a tribute to Swarm by Joel Califa
+(https://joelcalifa.com). Its code is not included in this repository and is not covered by this
+license. See those projects for their terms.
 
 Provided as is, without warranty.
