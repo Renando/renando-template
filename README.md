@@ -27,7 +27,7 @@ After your site is built, the agent plays an animation **once**: dozens of named
 
 ## Credits
 
-The animation uses **Swarm Rebuild** by [DhvanilPatel](https://github.com/DhvanilPatel/swarm-cursors), a tribute to **Swarm** by **[Joel Califa](https://joelcalifa.com)** ([original site](https://github.com/califa/swarm-site)). The cursor motion, flocking physics and build choreography are Joel Califa's work. Its code is **not** included in this repository: the script only loads it from the original repo and plays it once. Go look at the original, it's better.
+The animation uses [Swarm Rebuild](https://github.com/DhvanilPatel/swarm-cursors) by DhvanilPatel, inspired by [Swarm](https://joelcalifa.com) by Joel Califa.
 
 ## License
 
